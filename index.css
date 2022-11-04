@@ -12,6 +12,12 @@ p {
 
 ul li {
     cursor: pointer;
+    box-shadow: yellow 0px 1px 2px;
+}
+
+ul li:active {
+    box-shadow: rgb(255 255 0 / 50%) 3px 3px 3px 0px inset, rgb(255 255 0 / 50%) 1px 1px 1px 1px inset;
+    font-size: 15px;
 }
 
 svg {
