@@ -10,7 +10,8 @@ let arrayScript = [
   `function limitadorChars(element, limiteNumero){let osParagrafos=element; osParagrafos.forEach((e, index)=>{let chars=osParagrafos[index]; let novaFrase=''; chars=chars.textContent.split(""); chars.forEach((e, i)=>{if (i < limiteNumero){novaFrase=novaFrase + chars[i];}else{}}); osParagrafos[index].textContent=novaFrase + (novaFrase.length >=limiteNumero ? "..." : '');});};limitadorChars(INSIRA_A_LISTA_AQUI, INSIRA_NUMERO_MAXIMO);`,
   `let countElement = document.querySelectorAll("INSIRA_A_LISTA_AQUI");countElement.forEach((e, i) => { countValue = countElement[i].textContent.replace(/[^\\d]/g, ""); countValue = parseInt(countValue); countElement[i].textContent = 0; counter(countElement[i], 0, countValue, 3000);});function counter(id, start, end, duration) { let obj = id, current = start, range = end - start, increment = end > start ? 1 : -1, step = Math.abs(Math.floor(duration / range)), timer = setInterval(() => { current += increment; obj.textContent = current; if (current == end || end == 0 || end == "") { clearInterval(timer); } }, step);}`,
   `let abrev=document.querySelectorAll("#root > div > div > main > div.row.row-cols-1.row-cols-md-12 > div > div:nth-child(n) > div > div.card-title.h5");abrev.forEach((e, i)=>{e=e.textContent.replace(/[^A-Z]+/g, ""); abrev[i].textContent=e; console.log(e);})`,
-  `document.querySelectorAll("INSIRA_A_LISTA_AQUI").forEach((e, i)=>{e.onclick=function (){e.classList.toggle("INSIRA_A_CLASSE_AQUI");}})`
+  `document.querySelectorAll("INSIRA_A_LISTA_AQUI").forEach((e, i)=>{e.onclick=function (){e.classList.toggle("INSIRA_A_CLASSE_AQUI");}})`,
+  `const bodyContent=document.body.innerHTML,novoConteúdo=bodyContent.replace(/ORIGINAL/gi,"SUBSTITUIDA");document.body.innerHTML=novoConteúdo;`
 ];
 
 
